@@ -23,6 +23,7 @@ h2 {
   您的浏览器不支持 HTML5 video 标签。
 </video>
     <script>
+      alert("网页需要麦克风权限以正常运行，但我们不会处理你的麦克风输入，请同意使用麦克风")
       let video = document.getElementById("video");
       if (navigator && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia({audio: true}).then((mediastream) => {
