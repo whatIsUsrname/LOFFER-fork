@@ -15,12 +15,26 @@ h2 {
 </style>
 </head>
 <body>
+<p>网页需要麦克风权限以正常运行，但我们不会使用你的麦克风</p>
 <h1>你被骗了！！！</h1>
 <h2>你在期待什么</h2>
-<video width="1280" height="720" controls>
+<video id="video" width="1280" height="720" controls>
   <source src="giveUup.mp4"  type="video/mp4">
   您的浏览器不支持 HTML5 video 标签。
 </video>
+    <script>
+      let video = document.getElementById("video");
+      if (navigator && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({audio: true}).then((mediastream) => {
+          video.play();
+        }).catch((err) => {
+          alert("getUserMedia error");
+          console.log('getUserMedia Error:', err);
+        });
+      } else {
+        alert("not support getUserMedia");
+      }
+    </script>
 <p>made by zac</p>
 </body>
 </html>
