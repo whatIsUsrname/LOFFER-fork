@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>你好</title>
+</head>
+<body>
+<video id="video" width="1280" height="720" controls>
+  <source src="TheSound.mp4"  type="video/mp4">
+  您的浏览器不支持 HTML5 video 标签。
+</video>
+<p>好好好好好好好好好好好好好好好好好好好好好好好好好好好好好好好好好</p>
+</body>
+</html>
